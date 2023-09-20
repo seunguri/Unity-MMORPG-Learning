@@ -5,18 +5,19 @@ using UnityEngine;
 public class Managers : MonoBehaviour
 {
     static Managers s_instance;
-    public static Managers Instance { get { init(); return s_instance; } }
+    static Managers Instance { get { init(); return s_instance; } }
 
-    // Start is called before the first frame update
+    InputManager _input = new InputManager();
+    public static InputManager Input { get { return Instance._input; } }
+
     void Start()
     {
         init();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        _input.OnUpdate();
     }
 
     static void init()

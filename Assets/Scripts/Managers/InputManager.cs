@@ -1,18 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputManager : MonoBehaviour
+public class InputManager
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Action KeyAction = null;
 
-    // Update is called once per frame
-    void Update()
+    public void OnUpdate()
     {
-        
+        if (Input.anyKey == false)
+            return;
+
+        if (KeyAction != null)
+            KeyAction.Invoke();
     }
 }
