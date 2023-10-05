@@ -3,11 +3,16 @@ using System.Collections;
 
 public class Define
 {
+    public enum UIEvnet
+    {
+        Cilck,
+        Drag,
+    }
 
     public enum MouseEvent
     {
         Press,
-        Click
+        Click,
     }
 
     public enum CameraMode
