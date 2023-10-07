@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 72860230}
   - component: {fileID: 72860229}
   - component: {fileID: 72860228}
+  - component: {fileID: 72860234}
   m_Layer: 7
   m_Name: Cube
   m_TagString: Monster
@@ -157,7 +158,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -228,6 +229,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &72860234
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72860227}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &279034244 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8772207768499393203, guid: 5f25ccf14342a4ceca8aad28434b7de3, type: 3}
@@ -283,6 +311,14 @@ CapsuleCollider:
   m_Height: 1.5668981
   m_Direction: 1
   m_Center: {x: 0.0005092621, y: 0.7288109, z: 0}
+--- !u!81 &279034253
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279034244}
+  m_Enabled: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,6 +637,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8772207768499393203, guid: 5f25ccf14342a4ceca8aad28434b7de3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 279034249}
+    - targetCorrespondingSourceObject: {fileID: 8772207768499393203, guid: 5f25ccf14342a4ceca8aad28434b7de3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 279034253}
   m_SourcePrefab: {fileID: 100100000, guid: 5f25ccf14342a4ceca8aad28434b7de3, type: 3}
 --- !u!1001 &7260252292386483041
 PrefabInstance:
@@ -610,6 +649,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2875936395568511556, guid: 625b24c49361d403d8ddbded5aa70a70, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3435883018896598670, guid: 625b24c49361d403d8ddbded5aa70a70, type: 3}
       propertyPath: m_RootOrder
       value: 1
