@@ -5,8 +5,13 @@ using System;
 
 public static class Extension
 {
-    public static void AddUIEvent(this GameObject go, Action<PointerEventData> action, Define.UIEvnet type = Define.UIEvnet.Cilck)
+    public static T GetOrAddComponent<T>(this GameObject go) where T : UnityEngine.Component
     {
-        UI_Base.AddUIEvent(go, action, type);
+        return Util.GetOrAddComponent<T>(go);
+    }
+
+    public static void BindEvent(this GameObject go, Action<PointerEventData> action, Define.UIEvnet type = Define.UIEvnet.Cilck)
+    {
+        UI_Base.BindEvent(go, action, type);
     }
 }
