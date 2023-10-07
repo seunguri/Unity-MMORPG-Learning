@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameScene : BaseScene
-{
+{ 
     protected override void Init()
     {
         base.Init();
@@ -12,8 +12,7 @@ public class GameScene : BaseScene
 
         Managers.UI.ShowSceneUI<UI_Inven>();
 
-        for (int i = 0; i < 10; i++)
-            Managers.Resource.Instantiate("UnityChan");
+        Dictionary<int, Stat> dict = Managers.Data.StatDict;
     }
 
     public override void Clear()
