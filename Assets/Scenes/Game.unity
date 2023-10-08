@@ -131,6 +131,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2677958490248397791, guid: 8f66de1debf0b453895ffdfd79ecd77e, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677958490248397791, guid: 8f66de1debf0b453895ffdfd79ecd77e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684890800026705249, guid: 8f66de1debf0b453895ffdfd79ecd77e, type: 3}
+      propertyPath: m_Height
+      value: 0.8489329
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684890800026705249, guid: 8f66de1debf0b453895ffdfd79ecd77e, type: 3}
+      propertyPath: m_Radius
+      value: 0.1801675
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684890800026705249, guid: 8f66de1debf0b453895ffdfd79ecd77e, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0034208829
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684890800026705249, guid: 8f66de1debf0b453895ffdfd79ecd77e, type: 3}
+      propertyPath: m_Center.y
+      value: 0.38920212
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684890800026705249, guid: 8f66de1debf0b453895ffdfd79ecd77e, type: 3}
+      propertyPath: m_Center.z
+      value: 0.20559071
+      objectReference: {fileID: 0}
     - target: {fileID: 3460078341615509350, guid: 8f66de1debf0b453895ffdfd79ecd77e, type: 3}
       propertyPath: m_Name
       value: Snake
@@ -179,7 +207,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2684890800026705249, guid: 8f66de1debf0b453895ffdfd79ecd77e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -301,9 +330,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2115963552479236623, guid: 38716c83486e44c72bcbc1e69ba76f8d, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115963552479236623, guid: 38716c83486e44c72bcbc1e69ba76f8d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4205942698205105743, guid: 38716c83486e44c72bcbc1e69ba76f8d, type: 3}
       propertyPath: m_Name
       value: Frog
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416246719810210029, guid: 38716c83486e44c72bcbc1e69ba76f8d, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7051220831371854746, guid: 38716c83486e44c72bcbc1e69ba76f8d, type: 3}
       propertyPath: m_RootOrder
