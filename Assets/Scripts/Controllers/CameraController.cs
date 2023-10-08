@@ -13,6 +13,8 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     public GameObject _player = null;
 
+    public void SetPlayer(GameObject player) { _player = player; }
+
     void Start()
     {
         
@@ -20,6 +22,9 @@ public class CameraController : MonoBehaviour
 
     void LateUpdate()
     {
+        if (_player.IsValid() == false)
+            return;
+
         if (_mode == Define.CameraMode.QuaterView)
         {
             RaycastHit hit;
