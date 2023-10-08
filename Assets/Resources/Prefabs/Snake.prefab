@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6263123295862567678}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5048432998751052845}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tail.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4129011819390579729}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: neck.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5023624140681686135}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,9 @@ GameObject:
   - component: {fileID: 5160681117606206790}
   - component: {fileID: 2935348541202111330}
   - component: {fileID: 4253297803101442460}
-  m_Layer: 0
+  - component: {fileID: 3651262899234445031}
+  - component: {fileID: 860841372051281842}
+  m_Layer: 7
   m_Name: Snake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +165,7 @@ Transform:
   - {fileID: 456511736536427151}
   - {fileID: 7010836164908145362}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 150, z: 0}
 --- !u!205 &2935348541202111330
 LODGroup:
@@ -217,6 +219,47 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3651262899234445031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3460078341615509350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d28873221e2e4f8fb7ddab9167d1193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 0
+  _hp: 0
+  _maxHp: 0
+  _attack: 0
+  _defense: 0
+  _moveSpeed: 0
+--- !u!136 &860841372051281842
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3460078341615509350}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.499637
+  m_Height: 0.999274
+  m_Direction: 1
+  m_Center: {x: 0.000000010286256, y: 0.4723911, z: 0.23047684}
 --- !u!1 &3623213984845252007
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6811800677632403543}
   - component: {fileID: 3135922926863365671}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mesh_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 235013279059608032}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tail.03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7602085471020225216}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 48247871613614207}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7395438957310742361}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: neck.01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 456511736536427151}
   - component: {fileID: 7298916905135035998}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mesh_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5439345071386975331}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tail.02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7010836164908145362}
   - component: {fileID: 4124448717208246177}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mesh_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6732025531976562498}
   - component: {fileID: 1756076395973524874}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mesh_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
