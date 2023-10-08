@@ -1359,15 +1359,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7051220831371854746}
   - component: {fileID: 4416246719810210029}
-  - component: {fileID: 1869986258022166108}
-  - component: {fileID: 8845086450420265858}
-  - component: {fileID: 1395997266895763831}
-  - component: {fileID: 3516161333374879126}
   - component: {fileID: 2115963552479236623}
   - component: {fileID: 331930500360466324}
+  - component: {fileID: 8845086450420265858}
+  - component: {fileID: 1869986258022166108}
+  - component: {fileID: 3516161333374879126}
   m_Layer: 0
   m_Name: Frog
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1415,74 +1414,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1869986258022166108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4205942698205105743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5218f8e73e1a4530b49f5481c36085d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _state: 1
---- !u!114 &8845086450420265858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4205942698205105743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7b81cead6c8640a4b1c7387ec24b51c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsUsing: 0
---- !u!195 &1395997266895763831
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4205942698205105743}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &3516161333374879126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4205942698205105743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a496846e3b35746e88af235ede974a6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _level: 0
-  _hp: 0
-  _maxHp: 0
-  _attack: 0
-  _defense: 0
-  _moveSpeed: 0
-  _exp: 0
-  _gold: 0
 --- !u!54 &2115963552479236623
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1533,6 +1464,54 @@ CapsuleCollider:
   m_Height: 2.6174126
   m_Direction: 1
   m_Center: {x: -0.022328973, y: 1.1717548, z: 0.088379085}
+--- !u!114 &8845086450420265858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4205942698205105743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b81cead6c8640a4b1c7387ec24b51c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsUsing: 0
+--- !u!114 &1869986258022166108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4205942698205105743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5218f8e73e1a4530b49f5481c36085d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destPos: {x: 0, y: 0, z: 0}
+  _state: 1
+  _lockTarget: {fileID: 0}
+--- !u!114 &3516161333374879126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4205942698205105743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a496846e3b35746e88af235ede974a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 0
+  _hp: 0
+  _maxHp: 0
+  _attack: 0
+  _defense: 0
+  _moveSpeed: 0
+  _exp: 0
+  _gold: 0
 --- !u!1 &4373086133025863947
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,6 +3,14 @@ using System.Collections;
 
 public class Define
 {
+    public enum State
+    {
+        Die,
+        Idle,
+        Moving,
+        Skill,
+    }
+
     public enum Layer
     {
         Ground = 6,
