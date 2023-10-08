@@ -138,8 +138,8 @@ GameObject:
   - component: {fileID: 5160681117606206790}
   - component: {fileID: 2935348541202111330}
   - component: {fileID: 4253297803101442460}
-  - component: {fileID: 3651262899234445031}
   - component: {fileID: 860841372051281842}
+  - component: {fileID: 68104621327858128}
   m_Layer: 7
   m_Name: Snake
   m_TagString: Untagged
@@ -165,7 +165,7 @@ Transform:
   - {fileID: 456511736536427151}
   - {fileID: 7010836164908145362}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 150, z: 0}
 --- !u!205 &2935348541202111330
 LODGroup:
@@ -219,24 +219,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3651262899234445031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3460078341615509350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d28873221e2e4f8fb7ddab9167d1193, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _level: 0
-  _hp: 0
-  _maxHp: 0
-  _attack: 0
-  _defense: 0
-  _moveSpeed: 0
 --- !u!136 &860841372051281842
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -260,6 +242,24 @@ CapsuleCollider:
   m_Height: 0.999274
   m_Direction: 1
   m_Center: {x: 0.000000010286256, y: 0.4723911, z: 0.23047684}
+--- !u!114 &68104621327858128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3460078341615509350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d28873221e2e4f8fb7ddab9167d1193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 0
+  _hp: 0
+  _maxHp: 0
+  _attack: 0
+  _defense: 0
+  _moveSpeed: 0
 --- !u!1 &3623213984845252007
 GameObject:
   m_ObjectHideFlags: 0
