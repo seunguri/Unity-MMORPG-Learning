@@ -8,6 +8,29 @@ public class PlayerController : MonoBehaviour
     PlayerStat _stat;
     Vector3 _destPos;
 
+    Texture2D _swardIcon;
+    Texture2D _arrowIcon;
+
+    enum CursorType
+    {
+        None,
+        Sward,
+        Arrow,
+    }
+
+    CursorType _cursorType = CursorType.None;
+
+    void Start()
+    {
+        _swardIcon = Managers.Resource.Load<Texture2D>("Textures/Cursor/Sward");
+        _arrowIcon = Managers.Resource.Load<Texture2D>("Textures/Cursor/Green");
+
+        _stat = gameObject.GetComponent<PlayerStat>();
+
+        Managers.Input.MouseAction -= OnMouseClicked;
+        Managers.Input.MouseAction += OnMouseClicked;
+    }
+
     public enum PlayerState
     {
         Die,
@@ -17,15 +40,6 @@ public class PlayerController : MonoBehaviour
     }
 
     PlayerState _state = PlayerState.Idle;
-
-
-    void Start()
-    {
-        _stat = gameObject.GetComponent<PlayerStat>();
-
-        Managers.Input.MouseAction -= OnMouseClicked;
-        Managers.Input.MouseAction += OnMouseClicked;
-    }
 
     void UpdateDie()
     {
@@ -72,7 +86,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        switch(_state)
+        UpdateMouseCursor();
+
+        switch (_state)
         {
             case PlayerState.Die:
                 UpdateDie();
@@ -92,12 +108,24 @@ public class PlayerController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 100.0f, LayerMask.GetMask("Wall")))
+        if (Physics.Raycast(ray, out hit, 100.0f, _mask))
         {
-            _destPos = hit.point;
-            _state = PlayerState.Moving;
-
-            //if (hit.collider.gameObject.layer == (int)Define.Layer)
+            if (hit.collider.gameObject.layer == (int)Define.Layer.Monster)
+            {
+                if (_cursorType != CursorType.Sward)
+                {
+                    Cursor.SetCursor(_swardIcon, Vector2.zero, CursorMode.Auto);
+                    _cursorType = CursorType.Sward;
+                }
+            }
+            else
+            {
+                if (_cursorType != CursorType.Arrow)
+                {
+                    Cursor.SetCursor(_arrowIcon, new Vector2(_arrowIcon.width / 3, 0), CursorMode.Auto);
+                    _cursorType = CursorType.Arrow;
+                }
+            }
         }
     }
 
