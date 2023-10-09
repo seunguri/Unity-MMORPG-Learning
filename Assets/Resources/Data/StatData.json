@@ -2,18 +2,24 @@
     "stats": [
         {
             "level": "1",
-            "hp": "100",
-            "attack": "10"
+            "maxHp": "200",
+            "attack": "20",
+            "defense": "5",
+            "totalExp": "0"
         },
         {
             "level": "2",
-            "hp": "150",
-            "attack": "15"
+            "maxHp": "250",
+            "attack": "25",
+            "defense": "10",
+            "totalExp": "10"
         },
         {
             "level": "3",
-            "hp": "200",
-            "attack": "20"
+            "maxHp": "300",
+            "attack": "30",
+            "defense": "15",
+            "totalExp": "20"
         }
     ]
 }
