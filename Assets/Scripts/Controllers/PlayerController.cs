@@ -64,7 +64,8 @@ public class PlayerController : BaseController
             }
 
             float moveDist = Mathf.Clamp(_stat.MoveSpeed * Time.deltaTime, 0, distance);
-            transform.position += dir.normalized * moveDist;
+            NavMeshAgent nma = gameObject.GetOrAddComponent<NavMeshAgent>();
+            nma.Move(dir.normalized * moveDist);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), 20 * Time.deltaTime);
         }
     }
@@ -121,19 +122,19 @@ public class PlayerController : BaseController
                 {
                     if (raycastHit)
                     {
+                        _destPos = hit.point;
                         State = Define.State.Moving;
                         _stopSkill = false;
 
                         if (hit.collider.gameObject.layer == (int)Define.Layer.Monster)
                         {
                             _lockTarget = hit.collider.gameObject;
-                            _destPos = _lockTarget.transform.position;
+                            //_destPos = _lockTarget.transform.position;
                         }
 
                         else
                         {
                             _lockTarget = null;
-                            _destPos = hit.point;
                         }
                     }
                 }

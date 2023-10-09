@@ -59,7 +59,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -150,10 +150,10 @@ RectTransform:
   m_Father: {fileID: 4612952992555815006}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 767.9253, y: -116.568726}
-  m_SizeDelta: {x: -1632.3622, y: -357.5215}
+  m_AnchoredPosition: {x: -162.5747, y: -631.8473}
+  m_SizeDelta: {x: 228.6378, y: 443.9214}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6250697098144007754
 CanvasRenderer:
