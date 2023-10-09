@@ -48,6 +48,7 @@ public class Stat : MonoBehaviour
 
         }
 
-        Managers.Game.Despawn(gameObject);
+        BaseController tbc = gameObject.GetComponent<BaseController>();
+        tbc.State = Define.State.Die;
     }
 }

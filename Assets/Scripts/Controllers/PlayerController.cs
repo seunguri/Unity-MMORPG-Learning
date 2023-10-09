@@ -25,7 +25,7 @@ public class PlayerController : BaseController
 
     protected override void UpdateSkill()
     {
-        if (_lockTarget != null)
+        if (_lockTarget.IsValid())
         {
             Vector3 dir = _lockTarget.transform.position - transform.position;
             Quaternion quat = Quaternion.LookRotation(dir);
@@ -39,7 +39,7 @@ public class PlayerController : BaseController
         float distance = dir.magnitude;
 
         // monster attack within range
-        if (_lockTarget != null)
+        if (_lockTarget.IsValid())
         {
             if (distance <= _attackRange)
             {
@@ -70,12 +70,30 @@ public class PlayerController : BaseController
         }
     }
 
+    Coroutine _coroutineHit;
+
+    IEnumerator CoEffect(float time)
+    {
+        GameObject obj = Managers.Resource.Instantiate("BloodHit");
+        obj.transform.position = transform.position + Vector3.forward * _attackRange;
+        yield return new WaitForSeconds(time);
+        Managers.Resource.Destroy(obj);
+
+    }
+
+    void OnDieEvent()
+    {
+        StopCoroutine(_coroutineHit);
+        Managers.Game.Despawn(gameObject);
+    }
+
     void OnHitEvent()
     {
         Debug.Log("OnHitEvent");
 
-        if (_lockTarget != null)
+        if (_lockTarget.IsValid())
         {
+            _coroutineHit = StartCoroutine("CoEffect", 0.35f);
             Stat targetStat = _lockTarget.GetComponent<Stat>();
             targetStat.OnAttacked(_stat);
         }
@@ -127,21 +145,16 @@ public class PlayerController : BaseController
                         _stopSkill = false;
 
                         if (hit.collider.gameObject.layer == (int)Define.Layer.Monster)
-                        {
                             _lockTarget = hit.collider.gameObject;
-                            //_destPos = _lockTarget.transform.position;
-                        }
 
                         else
-                        {
                             _lockTarget = null;
-                        }
                     }
                 }
                 break;
             case Define.MouseEvent.Press:
                 {
-                    if (_lockTarget == null && raycastHit)
+                    if (!_lockTarget.IsValid() && raycastHit)
                         _destPos = hit.point;
                 }
                 break;

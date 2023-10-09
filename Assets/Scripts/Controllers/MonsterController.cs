@@ -78,17 +78,17 @@ public class MonsterController : BaseController
         }
     }
 
+    void OnDieEvent()
+    {
+        Managers.Game.Despawn(gameObject);
+    }
+
     void OnHitEvent()
     {
         if (_lockTarget != null)
         {
             Stat targetStat = _lockTarget.GetComponent<Stat>();
             targetStat.OnAttacked(_stat);
-
-            if (targetStat.Hp <= 0)
-            {
-                Managers.Game.Despawn(targetStat.gameObject);
-            }
 
                 if (targetStat.Hp > 0)
             {

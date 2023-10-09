@@ -23,6 +23,7 @@ public abstract class BaseController : MonoBehaviour
             switch (value)
             {
                 case Define.State.Die:
+                    animator.CrossFade("DEATH", 0.1f);
                     break;
                 case Define.State.Idle:
                     animator.CrossFade("WAIT", 0.1f);

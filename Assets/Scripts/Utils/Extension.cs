@@ -17,7 +17,7 @@ public static class Extension
 
     public static bool IsValid(this GameObject go)
     {
-        return go != null | go.activeSelf;
+        return go != null && go.activeSelf;
     }
 
 }

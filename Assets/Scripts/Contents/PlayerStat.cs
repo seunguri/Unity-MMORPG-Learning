@@ -57,6 +57,7 @@ public class PlayerStat : Stat
 
     protected override void OnDead(Stat attacker)
     {
-        Debug.Log("Player Dead");
+        BaseController bc = gameObject.GetComponent<BaseController>();
+        bc.State = Define.State.Die;
     }
 }

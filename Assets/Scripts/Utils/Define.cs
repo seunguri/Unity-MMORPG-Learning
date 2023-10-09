@@ -8,6 +8,7 @@ public class Define
         Unknown,
         Player,
         Monster,
+        Effect,
     }
 
     public enum State

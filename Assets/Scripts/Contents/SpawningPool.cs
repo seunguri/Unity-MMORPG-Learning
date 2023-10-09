@@ -34,7 +34,7 @@ public class SpawningPool : MonoBehaviour
     IEnumerator ReserveSpawn()
     {
         _reserveCount++;
-        yield return new WaitForSeconds(Random.Range(0, _spawnTime));
+        yield return new WaitForSeconds(Random.Range(1.0f, _spawnTime));
         GameObject obj = Managers.Game.Spawn(Define.WorldObject.Monster, "Snake");
         NavMeshAgent nma = obj.GetOrAddComponent<NavMeshAgent>();
 

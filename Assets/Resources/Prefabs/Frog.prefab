@@ -1185,9 +1185,9 @@ GameObject:
   - component: {fileID: 4467475021387926240}
   - component: {fileID: 6553146397768542632}
   - component: {fileID: 6454326451566661641}
-  - component: {fileID: 942491148035437903}
   - component: {fileID: 6110183134364935781}
   - component: {fileID: 3179064485374427223}
+  - component: {fileID: 1905716010481709770}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Player
@@ -1288,19 +1288,6 @@ CapsuleCollider:
   m_Height: 2.6174126
   m_Direction: 1
   m_Center: {x: -0.022328973, y: 1.1717548, z: 0.088379085}
---- !u!114 &942491148035437903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3667855277557542158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7b81cead6c8640a4b1c7387ec24b51c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsUsing: 0
 --- !u!114 &6110183134364935781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1336,6 +1323,19 @@ MonoBehaviour:
   _moveSpeed: 0
   _exp: 0
   _gold: 0
+--- !u!114 &1905716010481709770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3667855277557542158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b81cead6c8640a4b1c7387ec24b51c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsUsing: 0
 --- !u!1 &3716514915937210521
 GameObject:
   m_ObjectHideFlags: 0
